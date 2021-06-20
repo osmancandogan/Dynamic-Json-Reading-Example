@@ -1,0 +1,98 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    table {
+      float: right;
+      background: #212121;
+    }
+
+    body {
+      background-color: #121212;
+
+    }
+
+    td,
+    thead,
+    a {
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #535353;
+      transition: 300ms;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #1db954;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary,
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:visited {
+      background-color: #1db954 !important;
+      border-color: #1db954;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <button class="btn btn-primary m-2" id="btn1" onclick="first()">Sample 1</button>
+  <button class="btn btn-primary m-2" id="btn2" onclick="second()">Sample 2</button>
+  <button class="btn btn-primary m-2" id="btn3" onclick="third()">Sample 3</button>
+  <div class="row">
+    <div class="col-4 mr-5">
+      <table class="table table-stripped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Number Of Tracks</th>
+          </tr>
+        </thead>
+        <tbody id="playlists">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-2">
+      <table class="table table-stripped" id="more"></table>
+    </div>
+    
+
+    <div class="col-5">
+      <table class="table table-stripped" id="trackscomplete" style="display: none;">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Song Name</th>
+            <th>Artist</th>
+            <th>Album</th>
+          </tr>
+        </thead>
+        <tbody id="tracks"></tbody>
+      </table>
+    </div>
+  </div>
+  
+
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
